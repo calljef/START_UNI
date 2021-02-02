@@ -1,5 +1,7 @@
 package Entidades;
 
+import java.util.List;
+
 public class Livro  extends Produto implements Imposto{
 	
 	private String autor;
@@ -9,10 +11,10 @@ public class Livro  extends Produto implements Imposto{
 	private static final double PORCETAGEM = 0.1;
 	
 	public Livro() {		
-	}
-	
-	public Livro(String autor, String tema, int qtdPag) {
-		super();
+	}	
+
+	public Livro(String nome, Double preco, int qtd, String autor, String tema, int qtdPag) {
+		super(nome, preco, qtd);
 		this.autor = autor;
 		this.tema = tema;
 		this.qtdPag = qtdPag;
@@ -43,15 +45,15 @@ public class Livro  extends Produto implements Imposto{
 	}
 
 	@Override
-	public double calculaImposto(double imposto) {
+	public double calculaImposto() {
 		
 		if(this.getTema() == "educativo") {
 			
-			return this.getQtdPag();
+			return 0;
 			
 		}else {
 			
-			return this.getQtdPag()*PORCETAGEM;
+			return this.getPreco() * PORCETAGEM;
 		}
 		
 	}	

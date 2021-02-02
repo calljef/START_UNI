@@ -12,9 +12,9 @@ public class VideoGame  extends Produto implements Imposto{
 	
 	public VideoGame() {		
 	}
-	
-	public VideoGame(String marca, String modelo, boolean isUsado) {
-		super();
+
+	public VideoGame(String nome, Double preco, int qtd, String marca, String modelo, boolean isUsado) {
+		super(nome, preco, qtd);
 		this.marca = marca;
 		this.modelo = modelo;
 		this.isUsado = isUsado;
@@ -45,7 +45,7 @@ public class VideoGame  extends Produto implements Imposto{
 	}
 
 	@Override
-	public double calculaImposto(double imposto) {
+	public double calculaImposto() {
 		
 		if(this.isUsado) {
 			
@@ -57,9 +57,6 @@ public class VideoGame  extends Produto implements Imposto{
 			
 		}		
 
-	}
-	
-	
-	
+	}	
 
 }
