@@ -16,7 +16,7 @@ public class Aplicacao {
 		Livro l3 = new Livro("Java POO",20.0,50,"GFT","educativo",500);
 		
 		VideoGame ps4 = new VideoGame("ps4", 1800.0, 100, "Sony", "Slim", false);
-		VideoGame ps4Usado = new VideoGame("ps4", 100.0, 7, "Sony", "Slim", true);
+		VideoGame ps4Usado = new VideoGame("ps4", 1000.0, 7, "Sony", "Slim", true);
 		VideoGame xbox = new VideoGame("xbox", 1500.0, 500, "Microsoft", "One", false);
 		
 		List<Livro> livros = new ArrayList<Livro>();
@@ -34,8 +34,8 @@ public class Aplicacao {
 		System.out.println("-----------Testando calculo de impostos---------------");
 		System.out.println(l2.calculaImposto());
 		System.out.println(l3.calculaImposto());
-		System.out.println(ps4.calculaImposto());
 		System.out.println(ps4Usado.calculaImposto());
+		System.out.println(ps4.calculaImposto());
 		System.out.println("-----------Fim do teste do calcula imposto------------");
 		
 		System.out.println();

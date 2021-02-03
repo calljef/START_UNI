@@ -4,11 +4,7 @@ public class VideoGame  extends Produto implements Imposto{
 	
 	private String marca;
 	private String modelo;
-	private boolean isUsado;
-	
-	private static final double PORCETAGEM_USADO = 0.25;
-	private static final double PORCETAGEM_NOVO = 0.45;
-	
+	private boolean isUsado;	
 	
 	public VideoGame() {		
 	}
@@ -49,11 +45,11 @@ public class VideoGame  extends Produto implements Imposto{
 		
 		if(this.isUsado) {
 			
-			return this.getPreco() * PORCETAGEM_USADO;
+			return this.getPreco() * 0.25;
 			
 		}else {
 			
-			return this.getPreco() * PORCETAGEM_NOVO;
+			return this.getPreco() * 0.45;
 			
 		}		
 

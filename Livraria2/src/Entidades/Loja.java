@@ -57,9 +57,14 @@ public class Loja {
 		
 		if(livros.size() > 0) {			
 		
-			for(Livro livro : livros) {
+			System.out.println("A loja " + getNome() + " possui estes livros para venda: ");
+			
+			for(Livro livro : livros) {				
 				
-				System.out.println(livro);
+				System.out.println("Titulo: " + livro.getNome() + "," +
+						" preco: " + livro.getPreco() + "," +
+						" quantidade " + livro.getQtd() + 
+						" em estoque. ");
 			}
 			
 		}else {
@@ -73,9 +78,14 @@ public class Loja {
 		
 		if(videoGames.size() > 0) {			
 			
-			for(VideoGame videoGame : videoGames) {
-				
-				System.out.println(videoGame);
+			System.out.println("A loja " + getNome() + " possui estes video-games para venda: ");
+			
+			for(VideoGame videoGame : videoGames) {				
+					
+				System.out.println("Titulo: " + videoGame.getNome() + "," +
+						" preco: " + videoGame.getPreco() + "," +
+						" quantidade " + videoGame.getQtd() + 
+						" em estoque. ");				
 			}
 			
 		}else {

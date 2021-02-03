@@ -7,8 +7,6 @@ public class Livro  extends Produto implements Imposto{
 	private String autor;
 	private String tema;
 	private int qtdPag;
-		
-	private static final double PORCETAGEM = 0.1;
 	
 	public Livro() {		
 	}	
@@ -49,11 +47,11 @@ public class Livro  extends Produto implements Imposto{
 		
 		if(this.getTema() == "educativo") {
 			
-			return 0;
+			return 0.0;
 			
 		}else {
 			
-			return this.getPreco() * PORCETAGEM;
+			return this.getPreco() * 0.1;
 		}
 		
 	}	
